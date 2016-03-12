@@ -1,0 +1,9 @@
+RibbitProtocol DEFINITIONS ::= BEGIN
+
+  FrogTip ::= SEQUENCE {
+    number    INTEGER,
+    tip       UTF8String
+  }
+
+  Croak ::= SEQUENCE(SIZE(0..50)) OF FrogTip
+END
