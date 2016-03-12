@@ -26,7 +26,8 @@ C RIBBIT library.
 
 To build and install libribbit libraries
 
-```./configure
+```
+  ./configure
    make
    make install
 ```
@@ -95,7 +96,8 @@ int main() {
   printf("%s\n", t->tip.buf);
 
   return 0;
-}```
+}
+```
 
 ```
 rjenkins@rjenkins-VirtualBox:~/c-RIBBIT$ croak
