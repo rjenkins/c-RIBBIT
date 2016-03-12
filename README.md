@@ -116,7 +116,8 @@ If you want to run test make sure libcheck is installed
 
 If you wish to rebuild from asn1 install asn1c
 
-```sudo apt-get install asn1c
+```
+   sudo apt-get install asn1c
    cd src; asn1c ribbit.asn1
    cd ..; ./configure; make ; make install
 ```  
