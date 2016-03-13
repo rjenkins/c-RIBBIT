@@ -23,9 +23,6 @@
 C RIBBIT library.
 
 ## Quick start
-
-To build and install libribbit libraries
-
 ```
   ./configure
    make
@@ -43,7 +40,7 @@ lrwxrwxrwx  1 root root      18 Mar 12 15:36 libribbit.so -> libribbit.so.0.0.0
 -rw-r--r--  1 root root  753180 Mar 12 15:36 libribbit.a
 ```
 
-See ribbit.h for API 
+## [API] (https://github.com/rjenkins/c-RIBBIT/blob/master/src/ribbit.h) 
 
 ```
 /* HOW TO CREATE YOUR FROG */
@@ -62,7 +59,7 @@ void load_croak(FROG *frog, FILE *fp);
 FrogTip_t * get_tip(FROG *frog);
 ``` 
 
-See croak executable (src/croak_exec.c) for examples of how to use the library
+See croak executable (src/croak_exec.c) for example of how to use the library
 
 ```c
 int main() {
@@ -109,14 +106,16 @@ libcurl
 
 ```sudo apt-get install libcurl4-gnutls-dev```
 
+asn1c
+
+```sudo apt-get install asn1c````
+
 If you want to run test make sure libcheck is installed
 
 ```sudo apt-get install check```
 
-If you wish to rebuild from asn1 install asn1c
-
+If you installed asn1c headers and source in a non-standard location rebuild from asn1 using asn1c
 ```
-sudo apt-get install asn1c
-cd src; asn1c ribbit.asn1
-cd ..; ./configure; make ; make install
+asn1c ribbit.asn1
+./configure; make ; make install
 ```  
