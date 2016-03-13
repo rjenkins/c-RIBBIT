@@ -2,3 +2,8 @@ autom4te.cache/* linguist-vendored
 config.status linguist-vendored
 libtool linguist-vendored
 ltmain.sh linguist-vendored
+Makefile linguist-vendored
+Makefile.am linguist-vendored
+Makefile.in linguist-vendored
+src/Makefile* linguist-vendored
+tests/Makefile* linguist-vendored
