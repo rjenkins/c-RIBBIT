@@ -1,4 +1,4 @@
-/**************************************************************************$
+/**************************************************************************
  *      WELCOME, FRIEND
  *          _     _
  *         /@\---/@\
@@ -45,6 +45,10 @@
 #include "Croak.h"
 #include "ber_decoder.h"
 
+struct FROG_t {
+  Croak_t *cache;
+};
+
 /* SECRET STUFF */
 static void free_cache(FROG *frog) 
 {
@@ -70,9 +74,9 @@ static size_t processCroak(void *contents, size_t size, size_t nmemb, void *ptr)
 /**
  * LOADING FROG... 
  */
-FROG * frog_init()
+FROG *frog_init()
 {
-  FROG *frog = malloc(sizeof(FROG));
+  FROG *frog = malloc(sizeof(struct FROG_t));
   return frog;
 }
 

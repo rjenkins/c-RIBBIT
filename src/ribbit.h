@@ -41,13 +41,10 @@
 
 #include "Croak.h"
 
-typedef struct wise_amphibian {
-  Croak_t *cache;
-} FROG;
-
+typedef struct FROG_t FROG;
 
 /* HOW TO CREATE YOUR FROG */
-FROG * frog_init();
+FROG *frog_init();
 
 /* SAFELY DISPOSE OF FROG */
 void frog_close(FROG *frog);
