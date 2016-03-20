@@ -59,7 +59,7 @@ static void free_cache(FROG *frog)
 static size_t processCroak(void *contents, size_t size, size_t nmemb, void *ptr)
 {
   size_t realsize = size * nmemb;
-  Croak_t *croak = 0; 
+  Croak_t *croak = ((FROG *)ptr)->cache;
   asn_dec_rval_t rval;
 
   ber_decode(0, &asn_DEF_Croak, (void **)&croak, contents, realsize);
@@ -122,6 +122,7 @@ void croak(FROG *frog)
 
   if(frog->cache != NULL) {
     free_cache(frog);
+    frog->cache = 0;
   }
 
   CURL *curl_handle;
