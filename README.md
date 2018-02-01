@@ -108,7 +108,7 @@ libcurl
 
 asn1c
 
-```sudo apt-get install asn1c````
+```sudo apt-get install asn1c```
 
 If you want to run test make sure libcheck is installed
 
